@@ -19,6 +19,7 @@ module.exports = {
   },
 
   builds: {
-    'assets/styles/main.scss': 'public/styles/main.css'
+    'assets/styles/main.scss': 'public/styles/main.css',
+    'assets/styles/animate.css': 'public/styles/animate.css'
   }
 };

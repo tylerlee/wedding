@@ -5,27 +5,30 @@
     <title>Tyler &amp; Jennifer's Wedding</title>
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7251894/7267352/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="public/styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="public/styles/animate.css" />
+    <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
   </head>
   <body>
-    <div class='wrapper'>
-      <div class='sidebar'>
+    <div class='header-bar'></div>
+      <div class='header'>
         <div class='img-div'>
           <img src='assets/images/stamp.png' />
         </div>
         <nav>
-          <a href='index.html'>Welcome</a>
-          <a href='about.html'>About Us</a>
-          <a href='events.html'>Wedding Events</a>
-          <a href='travel.html'>Travel</a>
-          <a href='hotel.html'>Accommodations</a>
-          <a href='telluride.html'>Getting Around Telluride</a>
-          <a href='activities.html'>Local Activities</a>
-          <a href='registry.html'>Registry</a>
-          <a href='contact.html'>Contact Us</a>
+          <a href='#welcome'>Welcome</a>
+          <a href='#about'>About Us</a>
+          <a href='#events'>Wedding Events</a>
+          <a href='#travel'>Travel</a>
+          <a href='#hotel'>Accommodations</a>
+          <a href='#telluride'>Getting Around Telluride</a>
+          <a href='#activities'>Local Activities</a>
+          <a href='#registry'>Registry</a>
+          <a href='#contact'>Contact Us</a>
         </nav>
       </div>
       <div class='content-wrapper'>
         <div class='content' id='welcome'>
+          <div id='countdown'></div>
           <h1>Welcome</h1>
           <h3>Thank you so much for visiting our wedding website!</h3>
           <p>
@@ -44,127 +47,589 @@
           </p>
         </div>
 
+        <div class='content' id='events'>
+          <h1>Our Wedding</h1>
+
+          <p>
+            The ceremony and reception will be taking place the evening of August 28th,
+            in Telluride. We hope you are able to join us for a fun-filled evening of
+            celebration!!
+          </p>
+
+          <p>
+            Event times will be updated in April, so check back for more details.
+            Please see below for details on the beautiful venues!
+          </p>
+
+          <p>
+            Event attire is semi-formal. The ceremony will take place outdoors, so
+            please check the weather prior to packing! Late August usually yields highs
+            in the low 70s and lows around 40 overnight. So will be a nice break
+            from the hot Texas summer!
+          </p>
+
+          <p>
+            Cocktail hour will follow the ceremony, on the deck at Gorrono Ranch. The
+            reception will then be inside Gorrono, with access to the deck throughout
+            the evening.
+          </p>
+
+          <h3>Please see details and pictures below!</h3>
 
 
-
-      <div class='content' id='events'>
-        <h1>Our Wedding</h3>
-
-        <p>
-          The ceremony and reception will be taking place the evening of August 28th,
-          in Telluride. We hope you are able to join us for a fun-filled evening of
-          celebration!!
-        </p>
-
-        <p>
-          Event times will be updated in April, so check back for more details.
-          Please see below for details on the beautiful venues!
-        </p>
-
-        <p>
-          Event attire is semi-formal. The ceremony will take place outdoors, so
-          please check the weather prior to packing! Late August usually yields highs
-          in the low 70s and lows around 40 overnight. So will be a nice break
-          from the hot Texas summer!
-        </p>
-
-        <p>
-          Cocktail hour will follow the ceremony, on the deck at Gorrono Ranch. The
-          reception will then be inside Gorrono, with access to the deck throughout
-          the evening.
-        </p>
-
-        <h3>Please see details and pictures below!</h3>
-
-
-        <div class='panel'>
-          <h2>Welcome Party</h2>
-          <div class='album'>
-            <img src='assets/images/event-8.png' />
-            <img src='assets/images/event-7.png' />
-            <img src='assets/images/event-9.png' />
-          </div>
-          <div class='info'>
-            <div class='time'>
-              August 27, 2016<br>
-              9:30 pm to 12:00 am
+          <div class='panel'>
+            <h2>Welcome Party</h2>
+            <div class='album'>
+              <img src='assets/images/event-8.png' />
+              <img src='assets/images/event-7.png' />
+              <img src='assets/images/event-9.png' />
             </div>
-            <div class='directions'>
-              LOCATION TBD
+            <div class='info'>
+              <div class='time'>
+                August 27, 2016<br>
+                9:30 pm to 12:00 am
+              </div>
+              <div class='directions'>
+                LOCATION TBD
+              </div>
+            </div>
+            <div class='details'>
+              <p>
+               Following the rehearsal dinner on Saturday evening, we'd love to get
+               together with everyone who as traveled to Telluride and do some early
+               celebrating! Please stay tuned for details, and
+               check back this spring for the location!
+             </p>
             </div>
           </div>
-          <div class='details'>
-            <p>
-             Following the rehearsal dinner on Saturday evening, we'd love to get
-             together with everyone who as traveled to Telluride and do some early
-             celebrating! Please stay tuned for details, and
-             check back this spring for the location!
-           </p>
+
+
+          <div class='panel'>
+            <h2>Ceremony</h2>
+            <div class='album'>
+              <img src='assets/images/event-2.png' />
+              <img src='assets/images/event-1.png' />
+              <img src='assets/images/event-3.png' />
+            </div>
+            <div class='info'>
+              <div class='time'>
+                August 28, 2016<br>
+                5:00 pm to 5:30 pm
+              </div>
+              <div class='directions'>
+                San Sophia Overlook<br>
+                Telluride, CO<br><br>
+                <a class='button' href='#'>Get Directions »</a>
+              </div>
+            </div>
+            <div class='details'>
+              <p>
+                The free gondola departs from both Telluride and Mountain Village,
+                and is a 5-7 minute ride to San Sophia. Upon reaching the San Sophia
+                Station, it is about a 5 minute walk to the ceremony site.
+              </p>
+              <p>
+                Please plan to board the gondola by 4:30pm, and arrive at the ceremony
+                site by 4:45pm, to help ensure a prompt ceremony start time.
+              </p>
+            </div>
+          </div>
+
+          <div class='panel'>
+            <h2>Reception</h2>
+            <div class='album'>
+              <img src='assets/images/event-6.png' />
+              <img src='assets/images/event-5.png' />
+              <img src='assets/images/event-4.png' />
+            </div>
+            <div class='info'>
+              <div class='time'>
+                August 28, 2016<br>
+                6:00 pm to 10:30 pm
+              </div>
+              <div class='directions'>
+                Gorrono Ranch<br>
+                Telluride, CO<br><br>
+                <a class='button' href='#'>Get Directions »</a>
+              </div>
+            </div>
+            <div class='details'>
+              <p>
+                Following the reception, transportation will be provided for all guests
+                to Gorrono Ranch. Gorrono is about a five minute drive from the ceremony
+                site. Cocktail hour will begin at 6:00pm, followed by dinner, drinks,
+                and plenty of dancing!
+              </p>
+            </div>
           </div>
         </div>
 
+      <div class='content' id='about'>
+        <h1>A Little About Us</h1>
 
-        <div class='panel'>
-          <h2>Ceremony</h2>
-          <div class='album'>
-            <img src='assets/images/event-2.png' />
-            <img src='assets/images/event-1.png' />
-            <img src='assets/images/event-3.png' />
-          </div>
-          <div class='info'>
-            <div class='time'>
-              August 28, 2016<br>
-              5:00 pm to 5:30 pm
-            </div>
-            <div class='directions'>
-              San Sophia Overlook<br>
-              Telluride, CO<br>
-              <a href='#'>Get Directions »</a>
-            </div>
-          </div>
-          <div class='details'>
-            <p>
-              The free gondola departs from both Telluride and Mountain Village,
-              and is a 5-7 minute ride to San Sophia. Upon reaching the San Sophia
-              Station, it is about a 5 minute walk to the ceremony site.
-            </p>
-            <p>
-              Please plan to board the gondola by 4:30pm, and arrive at the ceremony
-              site by 4:45pm, to help ensure a prompt ceremony start time.
-            </p>
-          </div>
-        </div>
+        <p>
+          Tyler and Jennifer are both from McKinney, Texas. The attended Valley
+          Creek Elementary School together, and were even in some of the same classes!
+          They then attended Faubion Middle School together, followed by McKinney
+          High School.
+        </p>
 
-        <div class='panel'>
-          <h2>Reception</h2>
-          <div class='album'>
-            <img src='assets/images/event-6.png' />
-            <img src='assets/images/event-5.png' />
-            <img src='assets/images/event-4.png' />
-          </div>
-          <div class='info'>
-            <div class='time'>
-              August 28, 2016<br>
-              6:00 pm to 10:30 pm
-            </div>
-            <div class='directions'>
-              Gorrono Ranch<br>
-              Telluride, CO<br>
-              <a href='#'>Get Directions »</a>
-            </div>
-          </div>
-          <div class='details'>
-            <p>
-              Following the reception, transportation will be provided for all guests
-              to Gorrono Ranch. Gorrono is about a five minute drive from the ceremony
-              site. Cocktail hour will begin at 6:00pm, followed by dinner, drinks,
-              and plenty of dancing!
-            </p>
-          </div>
-        </div>
-        
+        <p>
+          It wasn't until senior year of high school that they began hanging out
+          socially, and soon began dating.
+        </p>
 
+        <p>
+          After attending separate colleges (Tyler at UT and Jennifer at Tulane),
+          they spent a few years apart pursuing their education and beginning careers.
+          By 2012, they found themselves back in Dallas, and opted to give it another
+          shot! Tyler and Jenn are currently living in Uptown Dallas with their dog, Mya.
+        </p>
+
+        <h2>The Proposal</h2>
+
+        <p>
+          While on an absolutely unbelievable summer vacation in 2015, Tyler finally
+          popped the question. It was the second day of a two week trip, and was the
+          perfect time. Tyler and Jenn had just arrived in Monument Valley, UT,
+          and were spending some time driving around and checking out the sights.
+          Tyler setup his camera to take a few sunset photos, and Jennifer snapped a
+          few photos for Facebook. Moments later, Tyler was down on one knee, and
+          Jennifer was beyond surprised! The wonderful day was followed by two weeks
+          of exploring several beautiful sites and national parks, and what was
+          simply the best trip yet.
+        </p>
+
+        <h2>The Big Day!</h2>
+
+        <p>
+          With their love for travel and the outdoors, Tyler and Jennifer
+          thought it only fitting to have a beautiful Colorado wedding. They will
+          be joined by family and friends atop a mountain in Telluride, CO and
+          surrounded by amazing views, for what will hopefully be the most
+          beautiful and fun celebration.
+        </p>
       </div>
+
+      <div class='content' id='activities'>
+        <h1>Local Activities</h1>
+
+        <p>
+          Telluride and Mountain Village offer tons of great activities year round,
+           and the summertime is no exception.
+        </p>
+
+        <p>
+          We hope everyone is able to enjoy their time in Telluride, and visit some of
+          the surrounding scenery and parks. Please continue to check back in for more
+          information and recommendations.
+        </p>
+
+        <p>
+          Telluride Ski Resort encompasses Mountain Village, a bustling town originally
+          developed as a cozy retreat from the slopes. Nestled high in the San Juan
+          Mountains — roughly 9,500 feet above sea level — Mountain Village has a
+          quaint yet vibrant atmosphere with shops and restaurants lining cobblestone
+          streets.
+        </p>
+
+        <p>
+          Aside from exploring Mountain Village and Telluride, some great outdoor
+          activities include:
+        </p>
+
+        <ul>
+          <li>Hiking and Backpacking</li>
+          <li>Fly fishing</li>
+          <li>Horseback riding</li>
+          <li>Mountain biking</li>
+          <li>Jeep or 4x4 tours</li>
+          <li>Golfing at the 18-Hole Telluride Golf Course</li>
+          <li>Kayaking on the San Miguel River</li>
+          <li>Canoeing and paddle boarding</li>
+          <li>River rafting and tubing</li>
+          <li>Mesa Verde National Park</li>
+          <li>Black Canyon National Park</li>
+        </ul>
+
+        <p>
+          And for all you first timers to Telluride, check out some helpful
+          information through Telluride Ski Resort:
+        </p>
+
+        <p>
+          http://www.tellurideskiresort.com/trip-planning/first-timers-guide
+          http://www.tellurideskiresort.com/events-activities/activities/summer/
+        </p>
+
+        <div class='panel'>
+          <h2>Bridal Veil Falls</h2>
+          <p>
+            As the longest natural free-falling waterfall in Colorado, Bridal Veil Falls
+            is a must-see for hikers in the area. The falls cascade 365 feet and views
+            from the top stretch out across Telluride and the neighboring village of
+            Pandora. The entire hike is on a dirt and gravel roadway (so wear some sturdy
+            shoes), about 2 miles (one-way) and gains 1,200 feet in elevation.
+          </p>
+          <p>
+            The top of the falls is also home to the Smuggler-Union Hydroelectric Power
+            Plant, originally built in 1907 to supply the neighboring mine. It was fully
+            restored in the 1990s and today provides about 25 percent of Telluride's
+            electric power.
+          </p>
+          <p>
+            The trail leading up the massive waterfall is suitable for hikers and bikers
+            as well as four-wheel drive vehicles. Once at the top of the falls, the trail
+            narrows and vehicles are no longer permitted but the trail offers a
+            spectacular aerial view of the town below. Past hikers say the elevation
+            change is barely noticeable, but the climb to the top of the falls can
+            be a little slick.
+          </p>
+          <p>
+            To reach the falls, head east of town on Colorado Avenue for about 3 miles
+            then follow the dirt road marked County Road. If you want to make the hike
+            on foot, park at the Valley View Area parking lot and follow the switchbacks
+            up the 1.2 miles to the bottom of the falls.
+          </p>
+        </div>
+        <div class='panel'>
+          <h2>Bear Creek Trail</h2>
+          <p>
+            Bear Creek Trail is a must-do for those who visit Telluride in summer.
+            Starting at the end of South Pine Street, this trail leads 2½ miles (one-way)
+            through the Bear Creek Preserve to Bear Creek Falls. Several other trails
+            branch off from the falls, leading more adventurous hikers farther into
+            the preserve.
+          </p>
+          <p>
+            The view of Bear Creek Falls is well worth the trek up 1,050 feet in
+            elevation. The trail welcomes hikers and bikers every day from sun up to
+            sundown. You do not have to pay for trail access.
+          </p>
+        </div>
+
+        <div class='panel'>
+          <h2>Day Trip to Ouray, CO</h2>
+   <p>
+            The historic city of Ouray is located just a short hour's drive (50 miles)
+            from Telluride. Ouray claims itself as the "Little Switzerland of America"
+            and is set in a box canyon similar to Telluride's. Visitors will enjoy the
+            thermal activity at the local Ouray Hot Springs swimming pool (open all year)
+            and Vapor Caves. Ouray Hot Springs are just 1 hour drive from Telluride.
+            There are 3 pools: hot, warm and cool.
+          </p>
+          <p>
+            In Ouray, you can also take a beautiful, historic drive or four-wheel over
+            to Telluride along Yankee Boy Basin and the Imogene Pass. True Grit was
+            filmed in this area in 1968 and included scenes in the city of Ouray and
+            most notably, the interior of the Ouray County Court House. Visiting Ouray
+            can offer the perfect day trip from Telluride.
+          </p>
+        </div>
+
+        <div class='panel'>
+          <h2>Town Park</h2>
+          <p>
+            During the warmer months, visitors and residents head to Town Park on the
+            southeast edge of town to enjoy scenic walking paths and picturesque picnic
+            spots. Its 36 acres are also home to an outdoor swimming pool, basketball
+            and tennis courts, a fishing pond, multiple playgrounds and even a Frisbee
+            golf course. Plus, the park provides campgrounds, and plays host to many of
+            Telluride's festivals and events, including the Telluride Bluegrass Festival.
+          </p>
+          <a class='button' href='http://www.telluride-co.gov/index.aspx?NID=186'>Learn More</a>
+        </div>
+
+        <div class='panel'>
+          <h2>Telluride Historical Museum</h2>
+
+          <p>
+            Housed in the town's former hospital, the Telluride Historical Museum
+            recounts the village's exciting history, from its gold-mining days to the
+            development of the world-renowned Telluride Ski Resort. More than 9,000
+            artifacts and 1,400 photos live here, depicting Telluride's past. Visitors
+            can learn about the region's relationship with the Ute Native American tribe,
+            the difficulty of mining gold and, of course, the emergence of notorious
+            robber Butch Cassidy. The museum also offers the chance to experience the
+            village as it was a century ago by tagging along on a Telluride Afoot audio
+            walking tour. Previous visitors say that the Telluride Historical Museum is
+            a must-see for history buffs, due to its informative displays and
+            easy-to-understand layout.
+          </p>
+        </div>
+
+        <div class='panel'>
+          <h2>Mesa Verde National Park</h2>
+
+          <p>
+            Mesa Verde National Park, located between Durango, Cortez and only 2.5 hours
+            from Telluride, is rich in history with spectacular views stretching over
+            one hundred miles. The National Park was established to preserve
+            archaeological sites built by the Ancestral Puebloans dating back to
+            550 A.D. With a spectacular look into the lives of the Puebloans, these
+            inhabitants lived in the Four Corners region of Colorado for over 700 years.
+            Spend hours looking at more than 4,700 archaeological sites including
+            600 cliff dwellings, pueblos, masonry towers, farming structures,
+            and much more. Take time to look back into the past at one of the best
+            preserved and most notable National Parks of its kind in the United States.
+            But that's not all... Mesa Verde National Park has numerous hiking trails,
+            beautiful camping grounds, heritage foods and cuisine, Native American
+            handcrafts and shopping, and more.
+          </p>
+
+          <a class='button' href='http://www.nps.gov/meve/index.htm'>Learn More</a>
+        </div>
+
+        <div class='panel'>
+          <h2>Black Canyon of the Gunnison National Park</h2>
+
+          <p>
+            The Black Canyon of the Gunnison's unique and spectacular landscape was
+            formed slowly by the action of water and rock scouring down through hard
+            Proterozoic crystalline rock. No other canyon in North America combines the
+            narrow opening, sheer walls, and startling depths offered by the Black Canyon
+            of the Gunnison.
+          </p>
+
+          <p>
+            Carved by the Gunnison River two million years ago, this 12-mile long canyon
+            is one of Colorado's most spectacular. The 2,300-foot Painted Wall is the
+            state's highest cliff. Great for white water rafting and fishing, and known
+            for supreme hiking terrain. Located 13 miles outside of Montrose, the Black
+            Canyon Park is about two hours from Telluride.
+          </p>
+
+          <a class='button' href='http://www.nps.gov/blca/index.htm'>Learn More</a>
+        </div>
+
+        <div class='panel'>
+          <h2>Moab, Utah</h2>
+
+          <p>
+            Moab, Utah is located 134 miles from Telluride and is one of the best day
+            trips in the region. As you leave Telluride's 13,000 foot peaks, in just
+            under 3 hours you end up in the desert town of Moab. The drive takes you
+            through a beautiful canyon and Paradox Valley where climbers flock from all
+            over to experience this superb rock. Moab hosts many visitors each year,
+            mostly to visit the Arches and Canyonlands National Parks. Mountain biking,
+            camping, 4-wheeling, and much more adventures await you in this awesome town.
+          </p>
+        </div>
+      </div>
+
+      <div class='content' id='hotel'>
+        <h1>Recommended Hotels</h1>
+
+        <p>
+          This page will be updated in April with information regarding reserved
+          room blocks and recommended hotels. Please check back at that time to find
+          out more about accommodations, and special discounted rates.
+        </p>
+
+        <p>For now, a few hotel options have been included below.</p>
+
+        <div class='panel hotel'>
+          <img src='assets/images/peaks.png' />
+          <h3>The Peaks Resort and Spa</h3>
+          <p>
+            136 Country Club Dr<br>
+            Telluride, CO 81435<br>
+            (970) 728-6800
+          </p>
+          <a class='button' href='#'>Get Directions »</a>
+          <a class='button' href='#'>Book Accommodation »</a><br><br>
+
+          Room block information forthcoming.
+        </div>
+
+        <div class='panel hotel'>
+          <img src='assets/images/hotel-tell.png' />
+          <h3>The Hotel Telluride</h3>
+          <p>
+            199 Cornet Ln<br>
+            Telluride, CO 81435<br>
+            (970) 369-1188
+          </p>
+          <a class='button' href='#'>Get Directions »</a>
+          <a class='button' href='#'>Book Accommodation »</a><br><br>
+
+          Room block information forthcoming.
+        </div>
+
+        <div class='panel hotel'>
+          <img src='assets/images/mtn.png' />
+          <h3>Mountain Lodge Telluride Resort</h3>
+          <p>
+            457 Mountain Village Blvd<br>
+            Telluride, CO 81435<br>
+            (970) 369-5000
+          </p>
+          <a class='button' href='#'>Get Directions »</a>
+          <a class='button' href='#'>Book Accommodation »</a><br><br>
+
+          Room block information forthcoming.
+        </div>
+      </div>
+
+      <div class='content' id='registry'>
+        <h1>Registry</h1>
+      </div>
+
+      <div class='content' id='Contact'>
+        <h1>Contact</h1>
+      </div>
+
+      <div class='content' id='telluride'>
+        <h1>Local Transportation</h1>
+
+        <p>
+          Telluride is one of the most pedestrian-friendly cities in the United States.
+          Once you get here, you won’t need to rent a car thanks to services such as
+          the free Gondola, Dial-a-Ride/Telluride Concierge and Galloping Goose bus
+          service.
+        </p>
+
+        <h2>Free Gondola</h2>
+
+        <p>
+          Linking two towns, the Gondola is the only public transportation system of
+          its kind in North America. Running daily from 7am to midnight, the
+          13-minute gondola ride eliminates the 20-minute, 8-mile drive between
+          both towns. The midway point of the gondola is San Sophia Station,
+          where the ceremony will take place. The gondola operates year-round, with
+          temporary off-season closures
+        </p>
+
+        <p>
+          Learn more about the Telluride Gondola here:
+          http://www.tellurideskiresort.com/the-mountain/gondola/.
+        </p>
+
+        <h2>Galloping Goose</h2>
+
+        <p>
+          The Galloping Goose bus service provides free transportation in and around
+          the town of Telluride, Mountain Village and Lawson Hill. It also provides
+          paid bus transportation to Norwood and Placerville.
+        </p>
+
+        <p>
+          For more information about the Galloping Goose, call (970) 728-5700
+        </p>
+
+
+
+        <h2>Dial-a-Ride/Telluride Concierge</h2>
+
+        <p>
+          Dial-a-Ride/Telluride Concierge offers free, door-to-door transportation
+          for guests and residents in and around Mountain Village. For more
+          information about Dial-A-Ride, call (970) 728-8888
+        </p>
+      </div>
+
+      <div class='content' id='travel'>
+        <h1>Flying to Telluride</h1>
+
+        <p>
+          For those of you who are traveling from out-of-town, we are so grateful
+          that you are making the trip to Telluride for our wedding celebration.
+          Please find some helpful information about flights below, and use the
+          tool to search for available flights. Additionally, searching through
+          engines like Expedia.com are also great options. Please reach out to
+          Jennifer and Tyler with any questions regarding travel!
+        </p>
+
+        <p>
+          If you want to fly to Telluride, you have several options, with three
+          regional airports within a 2 ½ hour driving distance providing numerous
+          flight options. Choose to fly into either the Montrose/Telluride Airport
+          (MTJ), Grand Junction Regional Airport (GJT), or the Durango-La Plata
+          Airport (DRO) for convenient flights that fit your schedule. Some
+          nonstop flights are offered each day, as well as several connecting options.
+        </p>
+
+        <div class='panel'>
+          <h2>Flying into Montrose/Telluride Airport (MTJ)</h2>
+
+          <p>
+            The Montrose-Telluride Airport is located approximately 65 miles from
+            Telluride, offering year-round direct flights from Denver International
+            Airport (DEN). During the summer season, you can fly direct to
+            Montrose/Telluride from Denver International Airport (DEN), Dallas-Fort
+            Worth International Airport (DFW) and Phoenix Sky Harbor International
+            Airport (PHX).
+          </p>
+        </div>
+
+
+        <div class='panel'>
+          <h2>Flying into Grand Junction (GJT)</h2>
+
+          <p>
+            The Grand Junction Regional Airport offers non-stop flights from six
+            cities and hundreds of connecting destinations. Non-stop flights are
+            available from Denver International Airport (DEN), Dallas/Fort Worth
+            International Airport (DFW), Phoenix Sky Harbor International Airport (PHX),
+            Salt Lake City (SLC), Las Vegas (LAS), Los Angeles (LAX) and Houston (IAH).
+          </p>
+
+          <p>
+            Once you arrive in your desired airport destination, there are plenty of
+            Ground Transportation options to take advantage of. Additionally, if
+            you prefer to rent a car, Durango and Grand Junction airports are each
+            approximately a 2.5 hour drive, while Montrose is about an hour and a
+            half away.
+          </p>
+        </div>
+
+        <div class='panel'>
+          <h2>Flying into Durango-La Plata Airport (DRO)</h2>
+
+          <p>
+            The Durango-La Plata Airport is a full-service regional airport with over
+            a dozen daily non-stop flights from Denver International Airport (DEN),
+            Dallas/Fort Worth International Airport (DFW) and Phoenix Sky Harbor
+            International Airport (PHX), as well as convenient connecting flights
+            from over 300 cities. The Durango-La Plata Airport offers year-round
+            service from the following airlines:
+          </p>
+
+          <ul>
+            <li>
+              American Airlines – Daily direct service from Dallas-Fort Worth (DFW)
+              and Phoenix Sky Harbor (PHX)
+            </li>
+            <li>
+              United Airlines – Daily direct service from Denver International
+              Airport (DEN)
+            </li>
+          </p>
+        </div>
+
+        <div class='panel'>
+
+          <h2>Transportation from Airports</h2>
+
+          <p>
+            The three main regional airports, Montrose-Telluride Airport (MTJ),
+            Grand Junction Regional Airport (GJT) and Durango-La Plata County Airport
+            (DRO) offer a variety of rental car and airport transfer shuttle
+            services to Telluride and Mountain Village.
+          </p>
+
+          <p>
+            Information regarding recommended transportation to and from the airport
+            will be added here shortly, so please check back for updates!
+          </p>
+
+          <p>
+            Please check here for additional options, and rental cars through Avis,
+            Hertz, Budget, and National: http://www.tellurideskiresort.com/trip-planning/getting-here/ground-transportation/
+          </p>
+        </div>
+      </div>
+    </div>
 <!--
       <div class='index-images'>
         <img src='assets/images/event-8.png' />
@@ -203,7 +668,6 @@
         <polygon class="st3" points="32.7,79.7 50.2,55.2 51.1,59.2 "/>
         <polyline class="st3" points="55.5,65 61.5,48.1 65.2,52.7 55.9,65.4 "/>
       </svg>
-    </div>
 
     <script type="text/javascript">
       setTitle = function () {
@@ -213,8 +677,11 @@
         const oneDay = 24*60*60*1000;
         const diffDays = Math.round((weddingDate.getTime() - today.getTime())/(oneDay));
 
+        var countdownEl = document.getElementById('countdown');
+
         if (diffDays > 0) {
           title.innerHTML = diffDays + ' Days until Tyler & Jen\'s Wedding';
+          countdownEl.innerHTML = diffDays + ' Days left';
         } else if (diffDays = 0) {
           title.innerHTML = 'It\'s Today';
         }
@@ -222,6 +689,9 @@
 
       window.onload = function () {
         setTitle();
+
+        $('nav a').click(function () {
+        });
       };
     </script>
   </body>

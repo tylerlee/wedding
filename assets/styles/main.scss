@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+}
+
+a:hover {
+ cursor:pointer;
 }
 
 html, body {
-  font-family: 'Archer';
+  font-family: 'Archer', sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -15,33 +17,29 @@ body {
   margin: 0;
 }
 
-.sidebar {
+.header {
   background: #fff;
-  border-right: 5px solid #eee;
   min-width: 100%;
 }
 
-.sidebar img{
+.header img{
   display: block;
-  flex: 1;
   position: relative;
   margin: 0 auto;
-  top: 50px;
+  top: 30px;
   margin-bottom: 20px;
   max-width: 400px;
 }
 
 nav {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px;
+  padding: 30px 50px 0 50px;
   text-align: center;
 }
 
 nav a {
-  color: black;
-  display: inline-block;
-  flex: 1;
+  color: #222;
+  display: block;
   font-size: 21px;
   font-weight: 500;
   padding: 12px 30px;
@@ -49,18 +47,27 @@ nav a {
   min-width: 15%;
   text-align: center;
   text-decoration: none;
+  transition: color 1s ease-in-out;
+}
+
+nav a:hover {
+  background: #fff;
+  color: black;
+
 }
 
 .content-wrapper {
   background: linear-gradient(to bottom, #f9f9f9 0%,#f9f9f9 100%);
   overflow: scroll;
-  padding: 60px 60px;
-  width: 80%;
+  padding: 0 60px;
+  width: 90%;
   z-index:5;
 }
 
 .content {
+  margin: 0 auto 800px auto;
   max-width: 700px;
+  padding-top: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,12 +78,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 60px; }
 h2 { font-size: 32px; line-height: 40px; }
+h3 { font-size: 28px; line-height: 36px; }
 
 p, .panel {
   font-family: 'gotham';
   font-size: 17px;
   font-weight: 200;
   line-height: 29px;
+  margin-bottom: 2rem;
 }
 
 .panel .title {
@@ -127,11 +136,11 @@ p, .panel {
 }
 
 .panel .album:hover img:first-child {
-  transform: translate(-6em,0) rotate(2deg);
+  transform: translate(-9em,-40px) rotate(3deg);
 }
 
 .panel .album:hover img:nth-child(3n) {
-  transform: translate(6em,0) rotate(-3deg);
+  transform: translate(6em, 100px) rotate(-5deg);
 }
 
 .panel .info {
@@ -191,4 +200,69 @@ a.button {
   font-weight: 500;
   padding: 8px 12px;
   text-decoration: none;
+}
+
+a.button:hover {
+  background: #8ff26c;
+}
+
+.header-bar {
+  border-top: 10px solid #f26c8f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+nav {
+  left: 0;
+  top: 240px;
+  position: fixed;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.header img {
+  display: inline-block;
+  position: fixed;
+  left: 50px;
+  width: 200px;
+}
+nav {
+  display: inline-block;
+}
+#countdown {
+  color: #ccc;
+  position: absolute;
+  left: 510px;
+  top: 80px;
+}
+
+.hotel {
+  position: relative;
+}
+.hotel img {
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px #dedede;
+  max-width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(4deg);
+  transition: 1s ease-in-out;
+}
+
+.hotel:nth-child(2n) img {
+  transform: rotate(8deg);
+}
+
+.hotel:nth-child(3n) img {
+  transform: rotate(-3deg);
+}
+
+.hotel img:hover {
+  transform: scale(2, 2);
+  width: 500px;
 }
