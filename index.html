@@ -9,26 +9,26 @@
     <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
   </head>
   <body>
+    <div id='countdown'></div>
     <div class='header-bar'></div>
       <div class='header'>
         <div class='img-div'>
           <img src='assets/images/stamp.png' />
         </div>
         <nav>
-          <a href='#welcome'>Welcome</a>
-          <a href='#about'>About Us</a>
-          <a href='#events'>Wedding Events</a>
-          <a href='#travel'>Travel</a>
-          <a href='#hotel'>Accommodations</a>
-          <a href='#telluride'>Getting Around Telluride</a>
-          <a href='#activities'>Things To Do</a>
-          <a href='#registry'>Registry</a>
-          <a href='#contact'>Contact Us</a>
+          <a href='#welcome' data-link='welcome'>Welcome</a>
+          <a href='#about' data-link='about'>About Us</a>
+          <a href='#events' data-link='events'>Wedding Events</a>
+          <a href='#travel' data-link='travel'>Travel</a>
+          <a href='#hotel' data-link='hotel'>Accommodations</a>
+          <a href='#telluride' data-link='telluride'>Getting Around Telluride</a>
+          <a href='#activities' data-link='activities'>Things To Do</a>
+          <a href='#registry' data-link='registry'>Registry</a>
+          <a href='#contact' data-link='contact'>Contact Us</a>
         </nav>
       </div>
       <div class='content-wrapper'>
         <div class='content' id='welcome'>
-          <div id='countdown'></div>
           <h1>Welcome</h1>
           <h3>Thank you so much for visiting our wedding website!</h3>
           <p>
@@ -382,43 +382,51 @@
           service.
         </p>
 
-        <h2>Free Gondola</h2>
+        <div class='panel'>
+          <h2>Free Gondola</h2>
 
-        <p>
-          Linking two towns, the Gondola is the only public transportation system of
-          its kind in North America. Running daily from 7am to midnight, the
-          13-minute gondola ride eliminates the 20-minute, 8-mile drive between
-          both towns. The midway point of the gondola is San Sophia Station,
-          where the ceremony will take place. The gondola operates year-round, with
-          temporary off-season closures
-        </p>
+          <p>
+            Linking two towns, the Gondola is the only public transportation system of
+            its kind in North America. Running daily from 7am to midnight, the
+            13-minute gondola ride eliminates the 20-minute, 8-mile drive between
+            both towns. The midway point of the gondola is San Sophia Station,
+            where the ceremony will take place. The gondola operates year-round, with
+            temporary off-season closures
+          </p>
 
-        <p>
-          Learn more about the Telluride Gondola here:
-          http://www.tellurideskiresort.com/the-mountain/gondola/.
-        </p>
+          <a class='button' href='http://www.tellurideskiresort.com/the-mountain/gondola/'>
+            Learn More
+          </a>
+        </div>
 
-        <h2>Galloping Goose</h2>
+        <div class='panel'>
 
-        <p>
-          The Galloping Goose bus service provides free transportation in and around
-          the town of Telluride, Mountain Village and Lawson Hill. It also provides
-          paid bus transportation to Norwood and Placerville.
-        </p>
+          <h2>Galloping Goose</h2>
 
-        <p>
-          For more information about the Galloping Goose, call (970) 728-5700
-        </p>
+          <p>
+            The Galloping Goose bus service provides free transportation in and around
+            the town of Telluride, Mountain Village and Lawson Hill. It also provides
+            paid bus transportation to Norwood and Placerville.
+          </p>
 
+          <p>
+            For more information about the Galloping Goose:
+          </p>
 
+          <a class='button call' href='tel:9707285700'>Call: (970) 728-5700</a>
+        </div>
 
-        <h2>Dial-a-Ride/Telluride Concierge</h2>
+        <div class='panel'>
+          <h2>Dial-a-Ride/Telluride Concierge</h2>
 
-        <p>
-          Dial-a-Ride/Telluride Concierge offers free, door-to-door transportation
-          for guests and residents in and around Mountain Village. For more
-          information about Dial-A-Ride, call (970) 728-8888
-        </p>
+          <p>
+            Dial-a-Ride/Telluride Concierge offers free, door-to-door transportation
+            for guests and residents in and around Mountain Village. For more
+            information about Dial-A-Ride:
+          </p>
+
+          <a class='button call' href='tel:9707288888'>Call: (970) 728-8888</a>
+        </div>
       </div>
 
 
@@ -698,7 +706,7 @@
 
         if (diffDays > 0) {
           title.innerHTML = diffDays + ' Days until Tyler & Jen\'s Wedding';
-          countdownEl.innerHTML = diffDays + ' Days left';
+          countdownEl.innerHTML = diffDays + ' Days Away';
         } else if (diffDays = 0) {
           title.innerHTML = 'It\'s Today';
         }
@@ -707,7 +715,10 @@
       window.onload = function () {
         setTitle();
 
-        $('nav a').click(function () {
+        $('nav a').click(function (e) {
+          e.preventDefault();
+          $('.content').hide();
+          $('.content#' + $(this).data('link')).show();
         });
       };
     </script>

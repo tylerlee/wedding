@@ -202,6 +202,7 @@ p, .panel, ul {
   width: 15%;
 }
 
+
 a.button {
   background: #f26c8f;
   border-radius: 5px;
@@ -212,8 +213,21 @@ a.button {
   text-decoration: none;
 }
 
-a.button:hover {
+a.button:hover,
+a.button:focus {
   background: #8ff26c;
+}
+
+a.button.call {
+  background: white;
+  border-left: 3px solid #f26c8f;
+  color: #f26c8f;
+  border-radius: 0;
+}
+a.button.call:hover,
+a.button.call:focus {
+  background: #f26c8f;
+  color: white;
 }
 
 .header-bar {
@@ -244,10 +258,11 @@ nav {
   display: inline-block;
 }
 #countdown {
-  color: #ccc;
-  position: absolute;
-  left: 510px;
-  top: 80px;
+  color: #bbb;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 51;
 }
 
 .hotel, .visit {
