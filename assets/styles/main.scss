@@ -1,57 +1,60 @@
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
+
 html, body {
   font-family: 'Archer';
   height: 100%;
   width: 100%;
 }
+
 body {
   background: #f9f9f9;
   margin: 0;
 }
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
+
 .sidebar {
-  background: white;
-  border-right: 2px solid rgba(0,0,0,0.1);
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  height: 100%;
-  min-width: 200px;
-  max-width: 20%;
+  background: #fff;
+  border-right: 5px solid #eee;
+  min-width: 100%;
 }
-.sidebar .img-div {
-  flex: 1;
-}
+
 .sidebar img{
   display: block;
   flex: 1;
-  padding: 0 50px;
-  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  top: 50px;
+  margin-bottom: 20px;
+  max-width: 400px;
 }
+
 nav {
-  flex: 1;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+  text-align: center;
 }
 
 nav a {
   color: black;
-  display: block;
+  display: inline-block;
+  flex: 1;
   font-size: 21px;
   font-weight: 500;
-  padding: 8px 60px;
+  padding: 12px 30px;
   list-style: none;
+  min-width: 15%;
+  text-align: center;
   text-decoration: none;
 }
 
 .content-wrapper {
-  flex: 1;
+  background: linear-gradient(to bottom, #f9f9f9 0%,#f9f9f9 100%);
   overflow: scroll;
-  padding: 20px 60px;
+  padding: 60px 60px;
   width: 80%;
   z-index:5;
 }
@@ -60,62 +63,44 @@ nav a {
   max-width: 700px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archer';
   font-weight: 300;
+  margin-top: 0;
 }
 
-h1 {
-  font-size: 60px;
+h1 { font-size: 60px; }
+h2 { font-size: 32px; line-height: 40px; }
+
+p, .panel {
+  font-family: 'gotham';
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 29px;
 }
 
-h2 {
-  font-size: 32px;
-}
-
-p, .event {
-  font-size: 21px;
-  line-height: 32px;
-}
-
-.event .title {
+.panel .title {
   font-weight: bold;
 }
 
-.title-block {
-  display: block;
-  flex: 1;
-  font-size: 25px;
-  font-weight: 600;
-  opacity: .3;
-  padding: 40px 60px;
-}
-.title-block .light-text {
-  font-weight: 300;
-  padding: 0 5px;
-}
-#mountains {
-  max-width: 55%;
-  position: fixed;
-  right: -150px;
-  bottom: -50px;
-}
-
-
-.event {
+.panel {
   background: white;
   border: 1px solid #dedede;
   margin-top: 40px;
-  padding: 30px 50px;
+  padding: 50px;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.event .album {
+.panel .album {
   display: inline-block;
   position: relative;
   width: 350px;
   min-height: 250px;
 }
 
-.event .album img {
+.panel .album img {
   border: 10px solid white;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   transition: 1s ease-in-out;
@@ -123,33 +108,33 @@ p, .event {
   z-index: 6;
 }
 
-.event .album img:first-child{
+.panel .album img:first-child{
   position: absolute;
   transform: rotate(-4deg);
   z-index: 1;
 }
-.event .album img:nth-child(2n){
+.panel .album img:nth-child(2n){
   left: 40px;
   position: absolute;
   transform: rotate(0deg);
   z-index: 2;
 }
-.event .album img:nth-child(3n){
+.panel .album img:nth-child(3n){
   left: 75px;
   position: absolute;
   transform: rotate(6deg);
   z-index: 1;
 }
 
-.event .album:hover img:first-child {
+.panel .album:hover img:first-child {
   transform: translate(-6em,0) rotate(2deg);
 }
 
-.event .album:hover img:nth-child(3n) {
+.panel .album:hover img:nth-child(3n) {
   transform: translate(6em,0) rotate(-3deg);
 }
 
-.event .info {
+.panel .info {
   display: inline-block;
   vertical-align: top;
 }
@@ -164,24 +149,46 @@ p, .event {
   border: 6px solid white;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   width: 300px;
+
+  &:first-child{
+    transform: rotate(-4deg);
+    z-index: 1;
+  }
+
+  &:nth-child(2n){
+    bottom: 200px;
+    position: relative;
+    transform: rotate(0deg);
+    z-index: 2;
+  }
+
+  &:nth-child(3n){
+    bottom: 150px;
+    position: relative;
+    transform: rotate(6deg);
+    z-index: 1;
+  }
 }
 
-
-.index-images img:first-child{
-  transform: rotate(-4deg);
-  z-index: 1;
+#mountains {
+  max-width: 55%;
+  position: fixed;
+  right: -150px;
+  bottom: -50px;
 }
 
-.index-images img:nth-child(2n){
-  bottom: 200px;
-  position: relative;
-  transform: rotate(0deg);
-  z-index: 2;
+#plane {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 15%;
 }
 
-.index-images img:nth-child(3n){
-  bottom: 150px;
-  position: relative;
-  transform: rotate(6deg);
-  z-index: 1;
+a.button {
+  background: #f26c8f;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  padding: 8px 12px;
+  text-decoration: none;
 }
