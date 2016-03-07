@@ -17,12 +17,28 @@ body {
   margin: 0;
 }
 
-.header {
-  background: #fff;
-  min-width: 100%;
+.main-wrap {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: row;
+  z-index: 0;
 }
 
-.header img{
+.sidebar {
+  background: white;
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  width: 20%;
+}
+
+.content-wrapper {
+  flex: 4;
+  width: 80%;
+}
+
+.sidebar img{
   display: block;
   position: relative;
   margin: 0 auto;
@@ -60,16 +76,51 @@ nav a:hover {
   background: linear-gradient(to bottom, #f9f9f9 0%,#f9f9f9 100%);
   overflow: scroll;
   padding: 0 60px;
-  width: 90%;
   z-index:5;
 }
 
 .content {
   margin: 0 auto 100px auto;
+  margin-left: 60px;
   max-width: 700px;
   padding-top: 100px;
 }
 
+.inline-gallery  {
+  z-index: 3;
+}
+
+.inline-gallery .column {
+  display: inline-block;
+  margin-right: 1em;
+  vertical-align: top;
+  width: 30%;
+}
+
+.inline-gallery .column:last-child {
+  margin-right: 0;
+}
+
+.gallery-item {
+  background: white;
+  display: inline-block;
+  margin: 0 0 1em;
+  padding: 5px;
+  width: 100%;
+  z-index: 4;
+}
+
+.item-title {
+  display: none;
+  font-family: 'gotham';
+  font-size: 12px;
+}
+
+.gallery-item img{
+  max-width: 100%;
+  z-index: 5;
+}
+-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Archer';
   font-weight: 300;
@@ -193,6 +244,7 @@ p, .panel, ul {
   position: fixed;
   right: -150px;
   bottom: -50px;
+  z-index: 5;
 }
 
 #plane {
@@ -248,7 +300,7 @@ nav {
   padding: 20px;
 }
 
-.header img {
+.sidebar img {
   display: inline-block;
   position: fixed;
   left: 50px;
