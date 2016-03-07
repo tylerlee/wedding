@@ -712,13 +712,29 @@
         }
       }
 
+      showPage = function (pageName) {
+        $('.content').hide();
+        $('.content#' + pageName).show();
+      }
+
+      setInitialPage = function () {
+        if(window.location.hash) {
+          var pageName = window.location.hash.substring(1,window.location.hash.length);
+          showPage(pageName);
+        } else {
+          showPage('welcome');
+        }
+      }
+
       window.onload = function () {
         setTitle();
+        setInitialPage();
 
         $('nav a').click(function (e) {
           e.preventDefault();
-          $('.content').hide();
-          $('.content#' + $(this).data('link')).show();
+          const destination = $(this).data('link');
+          showPage(destination);
+          location.hash = destination;
         });
       };
     </script>
