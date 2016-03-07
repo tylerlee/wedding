@@ -1,7 +1,7 @@
 module.exports = {
 
   watch: {
-    paths: ['src']
+    paths: ['assets']
   },
 
   in: {
@@ -19,6 +19,6 @@ module.exports = {
   },
 
   builds: {
-    'src/styles/main.scss': 'public/styles/main.css'
+    'assets/styles/main.scss': 'public/styles/main.css'
   }
 };
