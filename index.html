@@ -814,9 +814,22 @@
         item.style.WebkitTransform = 'scale(5, 5)';
       }
 
+      closeGalleryItem = function () {
+        $.each($('.gallery-item'), function(index, item) {
+          item.show();
+        });
+      }
+
       window.onload = function () {
+        const imageExposed = false;
         setTitle();
         setInitialPage();
+
+        $(window).click(function (e) {
+          if(imageExposed) {
+            closeGalleryItem();
+          }
+        });
 
         $('nav a').click(function (e) {
           e.preventDefault();
@@ -826,8 +839,13 @@
         });
 
         $('.gallery-item').click(function() {
-          hideGalleryItem();
+          $.each($('.gallery-item'), function(index, item) {
+            if(item != this) {
+              hideGalleryItem(item);
+            }
+          });
           showGalleryItem(this);
+          imageExposed = true;
         });
       };
     </script>
