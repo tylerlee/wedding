@@ -718,8 +718,6 @@
         </div>
       </div>
 
-
-
       <div class='content' id='registry' style='display:none;'>
         <h1>Registry</h1>
         <p>Coming soon.</p>
@@ -816,15 +814,15 @@
 
       hideGalleryItem = function (item, opacity) {
         var win = {width: window.innerWidth, height: window.innerHeight};
-        var delay = Math.floor(Math.random() * 100);
+        var delay = Math.floor(Math.random() * 300);
 
         item.style.WebkitTransition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
         item.style.transition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
-        item.style.opacity = .3;
-        item.style.WebkitTransform = 'translate3d(0,0,0)';
-        item.style.transform = 'translate3d(0,0,0)';
-        item.style.opacity = opacity;
-        item.style.transform = 'scale(1)';
+
+        item.style.WebkitTransform = 'translate3d(' + win.width + 'px,0,0)';
+        item.style.transform = 'translate3d(' + win.width + 'px,0,0)';
+        item.style.opacity = 0;
+
         $(item).find('.item-title').hide();
         item.style['z-index'] = 1;
       }
@@ -832,34 +830,49 @@
       showGalleryItem = function (item) {
         var win = {width: window.innerWidth, height: window.innerHeight};
         var delay = Math.floor(Math.random() * 300);
-
-        var scaleValue =  (700) / $(item).width();
-
-        var moveLeft = $(item).position().left - $('.inline-gallery').position().left;
         item.style.WebkitTransition = 'opacity 1 ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+        item.style.WebkitTransform = 'translate3d(0,0,0)';
+        item.style.transform = 'translate3d(0,0,0)';
         item.style.opacity = 1;
-        $(item).find('.item-title').show();
-        console.log(moveLeft);
-        item.style.transform = 'scale(2.6)';
-        item.style['z-index'] = 5000;
-        $(item).find('img').style['z-index'] = 5000;
+      }
+
+      enlargeGalleryItem = function (item) {
+        item.style.transform = 'scale(3)';
+      }
+
+      shrinkGalleryItem = function (item) {
+        item.style.transform = 'scale(1)';
       }
 
       window.onload = function () {
+        var galleryItemOpen = false;
+
         setTitle();
         setInitialPage();
 
-        $('.inline-gallery').mouseout(function(){
-          $.each($('.gallery-item'), function(index, item) {
-            hideGalleryItem(item, 1);
-          });
+        $('.content-wrapper').click(function() {
+          if(galleryItemOpen) {
+            $.each($('.gallery-item'), function(index, item) {
+              shrinkGalleryItem(item);
+              showGalleryItem(item);
+            });
+          }
         });
 
-        $('.gallery-item').hover(function (e) {
-          $.each($('.gallery-item'), function(index, item) {
-            hideGalleryItem(item, .3);
-          });
-          showGalleryItem(this);
+        $('.gallery-item').click(function (e) {
+          if(galleryItemOpen) {
+            $.each($('.gallery-item'), function(index, item) {
+              showGalleryItem(item);
+              shrinkGalleryItem(item);
+            });
+          } else {
+            $.each($('.gallery-item'), function(index, item) {
+              hideGalleryItem(item, 0);
+              shrinkGalleryItem(item);
+            });
+            showGalleryItem(this);
+            enlargeGalleryItem(this);
+          }
         });
 
         $('nav a').click(function (e) {
