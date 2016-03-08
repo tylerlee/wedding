@@ -34,6 +34,10 @@ body {
   z-index: 0;
 }
 
+#contact .panel .button {
+  display: inline-block; 
+}
+
 .overlay {
   background: rgba(0,0,0,0.5);
   top: 0;
