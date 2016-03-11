@@ -4,19 +4,12 @@ module.exports = {
     paths: ['assets']
   },
 
-  in: {
-    scss: {
-      out: 'css',
-      transformers: 'sass'
+  pipe: [
+    {
+      name: 'sass',
+      only: 'assets/**/*.scss'
     }
-  },
-
-  in: {
-    hbs: {
-      out: 'html',
-      transformers: 'handlebars'
-    }
-  },
+  ],
 
   builds: {
     'assets/styles/main.scss': 'public/styles/main.css',
