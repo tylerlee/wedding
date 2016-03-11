@@ -27,10 +27,9 @@ body {
 
 .sidebar {
   background: white;
-  flex: 1;
+  flex: 2;
   height: 100%;
   text-align: center;
-  width: 20%;
   z-index: 0;
 }
 
@@ -54,8 +53,7 @@ body {
 }
 
 .content-wrapper {
-  flex: 4;
-  width: 80%;
+  flex: 9;
 }
 
 .sidebar img{
@@ -233,39 +231,8 @@ p, .panel, ul {
   vertical-align: top;
 }
 
-.index-images {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-.index-images img {
-  border: 6px solid white;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-  width: 300px;
-
-  &:first-child{
-    transform: rotate(-4deg);
-    z-index: 1;
-  }
-
-  &:nth-child(2n){
-    bottom: 200px;
-    position: relative;
-    transform: rotate(0deg);
-    z-index: 2;
-  }
-
-  &:nth-child(3n){
-    bottom: 150px;
-    position: relative;
-    transform: rotate(6deg);
-    z-index: 1;
-  }
-}
-
 #mountains {
-  max-width: 55%;
+  max-width: 850px;
   position: fixed;
   right: -150px;
   bottom: -50px;
@@ -360,18 +327,15 @@ a.button.call:focus {
 }
 
 nav {
-  left: 0;
-  top: 240px;
-  position: fixed;
+  top: 40px;
+  margin: 0 auto;
+  position: relative;
   width: 300px;
   text-align: center;
   padding: 20px;
 }
 
 .sidebar img {
-  display: inline-block;
-  position: fixed;
-  left: 50px;
   width: 200px;
 }
 nav {
@@ -426,4 +390,19 @@ nav {
 
 .visit img:hover {
   transform: scale(3, 3) rotate(-2deg);
+}
+
+
+#house {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 800px;
+  z-index: 5000;
+  transition: all 2s;
+  opacity: 0;
+}
+
+#mountains {
+  transition: all 2s;
 }
