@@ -7,7 +7,7 @@ a:hover {
 }
 
 html, body {
-  font-family: 'Archer', sans-serif;
+  font-family: "Archer A", "Archer B", 'Archer', serif;
   height: 100%;
   width: 100%;
 }
@@ -133,7 +133,7 @@ nav a:hover {
   background: white;
   display: none;
   position: absolute;
-  font-family: 'gotham';
+  font-family: "Gotham Rounded A", "Gotham Rounded B", helvetica, arial, sans-serif;;
   font-size: 6px;
   bottom: 15px;
   padding: 5px;
@@ -145,7 +145,7 @@ nav a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Archer';
+  font-family: "Archer A", "Archer B", 'Archer', serif;
   font-weight: 300;
   margin-top: 0;
 }
@@ -155,7 +155,7 @@ h2 { font-size: 32px; font-weight: 300; line-height: 40px; }
 h3 { font-size: 28px; font-weight: 300; line-height: 36px; }
 
 p, .panel, ul {
-  font-family: 'gotham';
+  font-family: "Gotham Rounded A", "Gotham Rounded B", helvetica, arial, sans-serif;;
   font-size: 17px;
   font-weight: 200;
   line-height: 29px;

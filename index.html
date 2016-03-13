@@ -1122,11 +1122,17 @@
           if(galleryItemOpen) {
             $.each($('.gallery-item'), function(index, item) {
               showGalleryItem(item);
+            });
+            $.each($('.gallery-item'), function(index, item) {
               shrinkGalleryItem(item);
             });
           } else {
             $.each($('.gallery-item'), function(index, item) {
               hideGalleryItem(item, 0);
+
+            });
+            $.each($('.gallery-item'), function(index, item) {
+              
               shrinkGalleryItem(item);
             });
             showGalleryItem(this);
