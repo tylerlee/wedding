@@ -814,7 +814,7 @@
 
       <div class='content' id='registry' style='display:none;'>
         <h1>Registry</h1>
-        <p>Coming soon.</p>
+        <img src='assets/images/macys.png' />
       </div>
 
       <div class='content' id='contact' style='display:none;'>
@@ -1071,30 +1071,6 @@
         }
       }
 
-      hideGalleryItem = function (item, opacity) {
-        var win = {width: window.innerWidth, height: window.innerHeight};
-        var delay = Math.floor(Math.random() * 300);
-
-        item.style.WebkitTransition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
-        item.style.transition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
-
-        item.style.WebkitTransform = 'translate3d(' + win.width + 'px,0,0)';
-        item.style.transform = 'translate3d(' + win.width + 'px,0,0)';
-        item.style.opacity = 0;
-
-        $(item).find('.item-title').hide();
-        item.style['z-index'] = 1;
-      }
-
-      showGalleryItem = function (item) {
-        var win = {width: window.innerWidth, height: window.innerHeight};
-        var delay = Math.floor(Math.random() * 300);
-        item.style.WebkitTransition = 'opacity 1 ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
-        item.style.WebkitTransform = 'translate3d(0,0,0)';
-        item.style.transform = 'translate3d(0,0,0)';
-        item.style.opacity = 1;
-      }
-
       enlargeGalleryItem = function (item) {
         item.style.transform = 'scale(3)';
       }
@@ -1109,38 +1085,17 @@
         setTitle();
         setInitialPage();
 
-        $('.content-wrapper').click(function() {
-          if(galleryItemOpen) {
-            $.each($('.gallery-item'), function(index, item) {
-              shrinkGalleryItem(item);
-              showGalleryItem(item);
-            });
-          }
+        $('.gallery-item').hover(function (e) {
+          enlargeGalleryItem(this);
+        });
+
+        $('.gallery-item').mouseout(function (e) {
+          shrinkGalleryItem(this);
         });
 
         $('.gallery-item').click(function (e) {
-          if(galleryItemOpen) {
-            $.each($('.gallery-item'), function(index, item) {
-              showGalleryItem(item);
-            });
-            $.each($('.gallery-item'), function(index, item) {
-              shrinkGalleryItem(item);
-            });
-          } else {
-            $.each($('.gallery-item'), function(index, item) {
-              hideGalleryItem(item, 0);
-
-            });
-            $.each($('.gallery-item'), function(index, item) {
-              
-              shrinkGalleryItem(item);
-            });
-            showGalleryItem(this);
-            enlargeGalleryItem(this);
-          }
+          shrinkGalleryItem(this);
         });
-
-
 
         $('nav a').click(function (e) {
           e.preventDefault();

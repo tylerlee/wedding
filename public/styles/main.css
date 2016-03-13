@@ -51,7 +51,7 @@ body {
   position: relative;
   margin: 0 auto;
   top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   max-width: 220px; }
 
 nav {
@@ -63,7 +63,7 @@ nav a {
   color: #222;
   display: block;
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 12px 30px;
   list-style: none;
   min-width: 15%;
@@ -141,6 +141,7 @@ h3 {
   line-height: 36px; }
 
 p, .panel, ul {
+  color: #555;
   font-family: "Gotham Rounded A", "Gotham Rounded B", helvetica, arial, sans-serif;
   font-size: 17px;
   font-weight: 200;
