@@ -349,7 +349,30 @@ nav {
 #mountains {
   transition: all 2s; }
 
-@media only screen and (max-width: 20000px) {
+#registry .panel img {
+  max-width: 300px;
+  width: 100%; }
+
+#registry a:hover {
+  opacity: .5; }
+
+#registry .panel a {
+  display: block;
+  text-align: center; }
+
+#registry .panel a:first-child {
+  margin-bottom: 80px; }
+
+#registry .panel a:first-child img {
+  max-width: 250px; }
+
+#registry .panel a:nth-child(2n) {
+  margin-bottom: 100px; }
+
+#registry .panel a:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (max-width: 900px) {
   .main-wrap {
     display: block; }
   .sidebar img {
