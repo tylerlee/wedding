@@ -52,11 +52,11 @@ body {
   margin: 0 auto;
   top: 30px;
   margin-bottom: 20px;
-  max-width: 400px; }
+  max-width: 220px; }
 
 nav {
   margin: 0 auto;
-  padding: 30px 50px 0 50px;
+  padding: 0px 50px 0 50px;
   text-align: center; }
 
 nav a {
@@ -282,15 +282,11 @@ a.button.call:focus {
   z-index: 50; }
 
 nav {
-  top: 40px;
   margin: 0 auto;
   position: relative;
   width: 300px;
   text-align: center;
   padding: 20px; }
-
-.sidebar img {
-  width: 200px; }
 
 nav {
   display: inline-block; }
@@ -341,7 +337,7 @@ nav {
 
 #house {
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   right: 0;
   width: 800px;
   z-index: 5000;
