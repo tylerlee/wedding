@@ -156,9 +156,8 @@ p, .panel, ul {
   border: 1px solid #dedede;
   margin-top: 40px;
   padding: 50px; }
-
-.panel p:last-child {
-  margin-bottom: 0; }
+  .panel p:last-child {
+    margin-bottom: 0; }
 
 .panel .album {
   display: inline-block;
@@ -349,14 +348,10 @@ nav {
 #mountains {
   transition: all 2s; }
 
-@media only screen and (max-width: 20000px) {
+@media only screen and (max-width: 960px) {
   .main-wrap {
     display: block; }
-  .sidebar img {
-    max-width: 650px; }
   nav {
     width: 100%; }
-  nav a {
-    font-size: 50px; }
-  p, .panel, ul {
-    line-height: 45px; } }
+    nav img {
+      width: 100%; } }
