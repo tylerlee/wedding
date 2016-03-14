@@ -61,6 +61,7 @@ nav {
   text-align: center; }
 
 nav a {
+  border-radius: 5px;
   color: #222;
   display: block;
   font-size: 21px;
@@ -73,7 +74,7 @@ nav a {
   transition: color 1s ease-in-out; }
 
 nav a:hover {
-  background: #fff;
+  background: #f4f4f4;
   color: black; }
 
 .content-wrapper {
