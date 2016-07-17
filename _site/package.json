@@ -1,0 +1,23 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerlee/wedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylerlee/wedding/issues"
+  },
+  "homepage": "https://github.com/tylerlee/wedding#readme",
+  "dependencies": {
+    "cogs": "^2.0.7",
+    "cogs-transformer-sass": "^1.0.5"
+  }
+}
